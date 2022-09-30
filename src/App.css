@@ -1,38 +1,228 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.coin-container {
+    display: flex;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.coin-row {
+    display: flex;
+    flex-direction: row;
+    justify-items: start;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #d7d7dd;
+    width: 900px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.coin { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    padding-right: 24px;
 }
 
-.App-link {
-  color: #61dafb;
+.coin h1 {
+   font-size: 16px;
+   width: 150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.coin img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.coin-symbol {
+    text-transform: uppercase;
+}
+
+.coin-data{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.coin-price{
+    width: 110px;
+}
+.coin-volume{
+    width: 200px;
+}
+.coin-marketcap{
+    width: 240px;
+}
+.coin-percent{
+    width: 80px;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+
+.coin-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+    color: #fff;
+}
+
+.coin-search {
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.coin-input {
+    background-color: rgba(36, 36, 14, 0.281);
+    color: white;
+    font-size: 1em;
+    border-radius: 1%;
+    border-width: 4px;
+    height: 5vh;
+    width: 20vw;
+}
+
+
+.coin-market {
+
+}
+
+
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 400px) {
+    .coin-input {
+        background-color: rgba(36, 36, 14, 0.281);
+        color: white;
+        font-size: 1em;
+        border-radius: 1%;
+        border-width: 4px;
+        height: 5vh;
+        width: 70vw;
+    }
+    .coin-row{
+        max-width: 300px;
+        flex-direction: column;
+        height: 100px;
+        justify-items: start;
+        align-items: left;
+        
+    }
+    .coin-marketcap {
+        display: none;
+    }
+    .coin img {
+        width: 20px;
+        height: 20px;
+        float: left;        
+    }
+    .coin-volume {
+        display: none;
+    }
+    .coin-percent {
+        display: none;
+    }
+    .coin-price {
+        max-width: 2%;
+    }
+    .coin h1{
+        display: none;
+    }
+    .coin-market{
+        display: none;
+    }
+    .coin-symbol {
+        margin-bottom: 2vh;
+    }
+}
+ 
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 401px) {
+    .coin-input {
+        background-color: rgba(36, 36, 14, 0.281);
+        color: white;
+        font-size: 1em;
+        border-radius: 1%;
+        border-width: 4px;
+        height: 5vh;
+        width: 65vw;
+    }
+    .coin-row{
+        max-width: 300px;
+        flex-direction: column;
+        height: 80px;  
+    }
+    .coin-percent {
+        display: none;
+    }
+
+}
+
+ 
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 500px) {
+    .coin-input {
+        background-color: rgba(36, 36, 14, 0.281);
+        color: white;
+        font-size: 1em;
+        border-radius: 1%;
+        border-width: 4px;
+        height: 5vh;
+        width: 60vw;
+    }
+    .coin-row{
+        max-width: 480px;
+        flex-direction: column;
+        height: 80px;  
+    }
+   
+
+}
+ 
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 729px) {
+    .coin-input {
+        background-color: rgba(36, 36, 14, 0.281);
+        color: white;
+        font-size: 1em;
+        border-radius: 1%;
+        border-width: 4px;
+        height: 5vh;
+        width: 55vw;
+    }
+}
+ 
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+    .coin-input {
+        background-color: rgba(36, 36, 14, 0.281);
+        color: white;
+        font-size: 1em;
+        border-radius: 1%;
+        border-width: 4px;
+        height: 5vh;
+        width: 40vw;
+    }
+    .coin-row{
+        max-width: 900px;
+        flex-direction: row;
+    }
 }
